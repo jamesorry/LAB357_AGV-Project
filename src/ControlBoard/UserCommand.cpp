@@ -1,5 +1,4 @@
 #include <avr/wdt.h>
-#include "SoftwareSerial.h"
 #include "UserCommand.h"
 #include "EEPROM_Function.h"
 #include "MainProcess.h"

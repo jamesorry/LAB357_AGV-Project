@@ -13,7 +13,6 @@ void MainProcess_ReCheckEEPROMValue()
 	if((maindata.HMI_ID < 0) || (maindata.HMI_ID > 128))
 	{
 		maindata.HMI_ID = 0;
-//		maindata.TestMaindataValue = 1000;
 		runtimedata.UpdateEEPROM = true;
 	}
 }
