@@ -4,14 +4,14 @@
 #include "MainProcess.h"
 #include "hmi.h"
 
-#define X0 5
-#define X1 4
-#define X2 3
-#define X3 2
-#define X4 1
-#define X5 0
-#define pwm1 4
-#define pwm2 6
+#define X0 0
+#define X1 1
+#define X2 2
+#define X3 3
+#define X4 4
+#define X5 5
+#define pwm1 8
+#define pwm2 10
 
 #define USER_COMMAND_DEBUG  1
 
@@ -62,8 +62,8 @@ void cmdCarFront()
     digitalWrite(OutputPin[X2], 1);
     digitalWrite(OutputPin[X3], 0);
     digitalWrite(OutputPin[X4], 1);
-    analogWrite(ADC_PWMPin[pwm1],value);
-    analogWrite(ADC_PWMPin[pwm2],value);
+    analogWrite(ADC_PWMPin[pwm1], value);
+    analogWrite(ADC_PWMPin[pwm2], value);
 }
 void cmdCarBack()
 {
@@ -79,8 +79,8 @@ void cmdCarBack()
     digitalWrite(OutputPin[X2], 1);
     digitalWrite(OutputPin[X3], 1);
     digitalWrite(OutputPin[X4], 0);
-    analogWrite(ADC_PWMPin[pwm1],value);
-    analogWrite(ADC_PWMPin[pwm2],value);
+    analogWrite(ADC_PWMPin[pwm1], value);
+    analogWrite(ADC_PWMPin[pwm2], value);
 }
 
 void cmdCarLeft()

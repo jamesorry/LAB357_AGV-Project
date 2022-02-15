@@ -23,7 +23,7 @@ void setup() {
         initEncoders();
         initMotorController();
     #endif
-    Serial.println("end of setup.");
+    cmd_port->println("end of setup.");
 }
 
 void loop() {
@@ -36,8 +36,12 @@ void loop() {
 	}
     
 #ifdef USE_MOTOR
+    #ifdef DEBUG 
+        cmd_port->print(readEncoder(LEFT));
+        cmd_port->print(F(", "));
+        cmd_port->println(readEncoder(RIGHT));
+    #endif  
     ROS_CommandProcess();
-
     //如果当前时刻大于 nextPID,那么就执行PID调速，并在 nextPID 上自增一个PID调试周期
     if (millis() > runtimedata.nextPID) {
         updatePID();
@@ -55,4 +59,3 @@ ISR(TIMER1_COMPA_vect)
 {
     
 }
-

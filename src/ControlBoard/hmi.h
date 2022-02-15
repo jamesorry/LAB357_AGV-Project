@@ -5,6 +5,8 @@
 #define	VERSTR	"2022011401"
 #define VENDOR	"Lab357"
 
+//#define DEBUG
+#undef DEBUG
 
 #define LEFT 0
 #define RIGHT 1
@@ -34,8 +36,8 @@
 #define DIGITAL_WRITE  'w'
 #define ANALOG_WRITE   'x'
 
-#define USE_MOTOR
-//#undef USE_MOTOR
+//#define USE_MOTOR
+#undef USE_MOTOR
 
 #ifdef USE_MOTOR
     /* Encoders*/
